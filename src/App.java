@@ -1,13 +1,14 @@
-import java.util.ArrayList;
-import java.util.HashSet;
-
+import java.util.*;;
 public class App {
     public static void main(String[] args) {
-        // Menguji CollectionUtils
-        ArrayList<String> nameList = CollectionUtils.createArrayList();
-        HashSet<String> uniqueNameSet = CollectionUtils.createHashSet();
+        Pair<Integer, String> pair = new Pair<>(10, "A");
+        System.out.println("First element: " + pair.getFirst());
+        System.out.println("Second element: " + pair.getSecond());
 
-        System.out.println("ArrayList dari CollectionUtils: " + nameList);
-        System.out.println("HashSet dari CollectionUtils: " + uniqueNameSet);
+        List<Integer> integerList = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5));
+        Set<String> stringSet = new HashSet<>(Arrays.asList("A", "B", "C", "D", "E"));
+
+        CollectionUtility.printCollection(integerList);
+        CollectionUtility.printCollection(stringSet);
     }
 }
